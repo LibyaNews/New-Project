@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المعدات المتاحة | مِعداد — تأجير معدات ثقيلة بأسعار معلنة</title>
+<meta name="description" content="تصفّح أكثر من 1,800 معدة ثقيلة متاحة للتأجير في السعودية: حفارات، رافعات، بلدوزرات، مولدات، وضواغط. فلترة حسب النوع والتوفر والسعر.">
+<meta name="theme-color" content="#1a2f4a">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a2f4a'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3E%D9%85%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">تخطَّ إلى المحتوى الرئيسي</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html" aria-label="مِعداد — الصفحة الرئيسية">
+      <span class="brand__mark" aria-hidden="true">م</span>
+      <span class="brand__text">
+        مِعداد
+        <span class="brand__sub">تأجير المعدات الثقيلة</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="فتح القائمة">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="التنقل الرئيسي">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">الرئيسية</a></li>
+        <li><a class="site-nav__link" href="equipment.html" aria-current="page">المعدات</a></li>
+        <li><a class="site-nav__link" href="how-it-works.html">كيف نعمل</a></li>
+        <li class="site-nav__cta"><a class="btn btn--sm" href="request.html">اطلب معدة</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">الكتالوج</span>
+        <h1>المعدات المتاحة للتأجير</h1>
+        <p>
+          كل الأسعار شاملة النقل داخل النطاق والتشغيل وضريبة القيمة المضافة.
+          الفلترة تعمل فوريًا على هذه الصفحة بدون إعادة تحميل.
+        </p>
+      </div>
+
+      <!-- ================= FILTERS ================= -->
+      <div class="filters" role="search" aria-label="فلترة المعدات">
+        <div class="filters__group" style="flex:1 1 260px">
+          <label class="filters__label" for="equip-search">ابحث بالاسم أو المواصفة</label>
+          <input type="search" id="equip-search" placeholder="مثال: حفارة 20 طن، رافعة شوكية…"
+                 style="min-height:48px;padding:.75rem 1rem;border:1px solid var(--sand-300);border-radius:var(--radius);background:var(--white)">
+        </div>
+
+        <div class="filters__group">
+          <span class="filters__label" id="lbl-cat">النوع</span>
+          <ul class="chip-set" aria-labelledby="lbl-cat">
+            <li><button class="chip" type="button" data-filter-group="category" data-filter-value="all" aria-pressed="true">الكل</button></li>
+            <li><button class="chip" type="button" data-filter-group="category" data-filter-value="earthmoving" aria-pressed="false">حفر وردم</button></li>
+            <li><button class="chip" type="button" data-filter-group="category" data-filter-value="lifting" aria-pressed="false">رفع</button></li>
+            <li><button class="chip" type="button" data-filter-group="category" data-filter-value="power" aria-pressed="false">طاقة</button></li>
+            <li><button class="chip" type="button" data-filter-group="category" data-filter-value="compaction" aria-pressed="false">دحل ورصف</button></li>
+          </ul>
+        </div>
+
+        <div class="filters__group">
+          <span class="filters__label" id="lbl-cond">التوفر</span>
+          <ul class="chip-set" aria-labelledby="lbl-cond">
+            <li><button class="chip" type="button" data-filter-group="condition" data-filter-value="all" aria-pressed="true">الكل</button></li>
+            <li><button class="chip" type="button" data-filter-group="condition" data-filter-value="instant" aria-pressed="false">تسليم فوري</button></li>
+            <li><button class="chip" type="button" data-filter-group="condition" data-filter-value="with-operator" aria-pressed="false">مع مشغّل</button></li>
+          </ul>
+        </div>
+
+        <div class="filters__group">
+          <span class="filters__label">&nbsp;</span>
+          <button class="btn btn--secondary btn--sm" type="button" id="reset-filters" style="min-height:40px">
+            إعادة تعيين الفلاتر
+          </button>
+        </div>
+      </div>
+
+      <div class="result-bar">
+        <p class="result-bar__count" role="status" aria-live="polite">
+          النتائج المعروضة: <strong id="result-count">9</strong> معدة
+        </p>
+        <p class="result-bar__count" style="color:var(--ink-600)">
+          الأسعار لليوم الواحد · شاملة الضريبة
+        </p>
+      </div>
+
+      <!-- ================= GRID ================= -->
+      <div class="grid grid--3" id="equip-grid">
+
+        <article class="equip" data-equip data-category="earthmoving" data-condition="instant with-operator"
+                 data-search="حفارة hitachi zx200 حفر وردم 20 طن مشغل">
+          <div class="equip__media">
+            <span class="equip__badge equip__badge--hot">تسليم فوري</span>
+            <svg viewBox="0 0 120 70" role="img" aria-label="حفارة زحّافة"><rect x="14" y="46" width="92" height="14" rx="6" fill="#e85d04"/><circle cx="30" cy="60" r="8" fill="#101d2e" stroke="#e9e2d7" stroke-width="2"/><circle cx="90" cy="60" r="8" fill="#101d2e" stroke="#e9e2d7" stroke-width="2"/><path d="M40 46V26h16l6-10h14l-4 10h12l10 20z" fill="#f5f1ea" opacity=".9"/><path d="M74 26l22-14 6 8-24 16z" fill="#e85d04"/></svg>
+          </div>
+          <div class="equip__body">
+            <h3 class="equip__title">حفارة هيتاشي ZX200</h3>
+            <div class="equip__meta"><span>20 طن</span><span>عمق 6.7 م</span><span>مع مشغّل</span></div>
+            <ul class="equip__specs"><li>شهادة سلامة سارية</li><li>توصيل مشمول</li></ul>
+            <div class="equip__foot">
+              <span class="equip__price">1,850 ر.س<small>لليوم · شامل الضريبة</small></span>
+              <a class="btn btn--sm" href="request.html">اطلب</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="equip" data-equip data-category="lifting" data-condition="instant"
+                 data-search="رافعة شوكية كهربائية forklift 3 طن مستودع">
+          <div class="equip__media">
+            <span class="equip__badge equip__badge--new">جديد</span>
+            <svg viewBox="0 0 120 70" role="img" aria-label="رافعة شوكية"><rect x="10" y="48" width="66" height="12" rx="5" fill="#e85d04"/><circle cx="26" cy="62" r="7" fill="#101d2e" stroke="#e9e2d7" stroke-width="2"/><circle cx="62" cy="62" r="7" fill="#101d2e" stroke="#e9e2d7" stroke-width="2"/><path d="M34 48V22h20v26z" fill="#f5f1ea" opacity=".9"/><rect x="80" y="14" width="6" height="44" fill="#e85d04"/><rect x="82" y="52" width="28" height="6" fill="#f5f1ea" opacity=".9"/></svg>
+          </div>
+          <div class="equip__body">
+            <h3 class="equip__title">رافعة شوكية كهربائية 3 طن</h3>
+            <div class="equip__meta"><span>3,000 كجم</span><span>رفع 4.5 م</span><span>بدون مشغّل</span></div>
+            <ul class="equip__specs"><li>بطارية كاملة الشحن</li><li>تشغيل صامت</li></ul>
+            <div class="equip__foot">
+              <span class="equip__price">640 ر.س<small>لليوم · شامل الضريبة</small></span>
+              <a class="btn btn--sm" href="request.html">اطلب</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="equip" data-equip data-category="lifting" data-condition="with-operator"
+                 data-search="رافعة متحركة crane 25 طن رفع ثقيل">
+          <div class="equip__media">
+            <svg viewBox="0 0 120 70" role="img" aria-label="رافعة متحركة"><rect x="8" y="50" width="58" height="12" rx="5" fill="#e85d04"/><circle cx="24" cy="64" r="7" fill="#101d2e" stroke="#e9e2d7" stroke-width="2"/><circle cx="52" cy="64" r="7" fill="#101d2e" stroke="#e9e2d7" stroke-width="2"/><path d="M30 50V30h18v20z" fill="#f5f1ea" opacity=".9"/><path d="M48 34l50-18 4 8-50 18z" fill="#f5f1ea" opacity=".9"/><rect x="96" y="16" width="4" height="22" fill="#e85d04"/></svg>
+          </div>
+          <div class="equip__body">
+            <h3 class="equip__title">رافعة متحركة 25 طن</h3>
+            <div class="equip__meta"><span>25 طن</span><span>امتداد 32 م</span><span>مع مشغّل</span></div>
+            <ul class="equip__specs"><li>خطة رفع معتمدة</li><li>تقييم موقع مجاني</li></ul>
+            <div class="equip__foot">
+              <span class="equip__price">2,400 ر.س<small>لليوم · شامل الضريبة</small></span>
+              <a class="btn btn--sm" href="request.html">اطلب</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="equip" data-equip data-category="earthmoving" data-condition="instant with-operator"
+                 data-search="بلدوزر bulldozer cat d6 ردم تسوية">
+          <div class="equip__media">
+            <span class="equip__badge equip__badge--hot">تسليم فوري</span>
+            <svg viewBox="0 0 120 70" role="img" aria-label="بلدوزر"><rect x="12" y="44" width="80" height="16" rx="7" fill="#e85d04"/><circle cx="28" cy="62" r="8" fill="#101d2e" stroke="#e9e2d7" stroke-width="2"/><circle cx="80" cy="62" r="8" fill="#101d2e" stroke="#e9e2d7" stroke-width="2"/><path d="M98 30v30H84V40z" fill="#f5f1ea" opacity=".9"/><path d="M36 44V22h26v22z" fill="#f5f1ea" opacity=".9"/><rect x="20" y="30" width="12" height="14" fill="#e85d04"/></svg>
+          </div>
+          <div class="equip__body">
+            <h3 class="equip__title">بلدوزر كاتربيلر D6</h3>
+            <div class="equip__meta"><span>20 طن</span><span>شفرة 3.4 م</span><span>مع مشغّل</span></div>
+            <ul class="equip__specs"><li>مناسب للتسوية الثقيلة</li><li>توصيل مشمول</li></ul>
+            <div class="equip__foot">
+              <span class="equip__price">2,150 ر.س<small>لليوم · شامل الضريبة</small></span>
+              <a class="btn btn--sm" href="request.html">اطلب</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="equip" data-equip data-category="power" data-condition="instant"
+                 data-search="مولد كهربائي generator 500 كيلو فولت امبير طاقة">
+          <div class="equip__media">
+            <span class="equip__badge equip__badge--new">جديد</span>
+            <svg viewBox="0 0 120 70" role="img" aria-label="مولد كهربائي"><rect x="16" y="24" width="72" height="34" rx="6" fill="#e85d04"/><rect x="24" y="32" width="26" height="18" rx="3" fill="#f5f1ea" opacity=".9"/><circle cx="72" cy="40" r="7" fill="#f5f1ea" opacity=".9"/><rect x="26" y="58" width="52" height="5" rx="2" fill="#101d2e"/></svg>
+          </div>
+          <div class="equip__body">
+            <h3 class="equip__title">مولد كهربائي 500 kVA</h3>
+            <div class="equip__meta"><span>500 kVA</span><span>ديزل</span><span>بدون مشغّل</span></div>
+            <ul class="equip__specs"><li>لوحة تحكم أوتوماتيكية</li><li>خزان وقود ممتلئ</li></ul>
+            <div class="equip__foot">
+              <span class="equip__price">1,120 ر.س<small>لليوم · شامل الضريبة</small></span>
+              <a class="btn btn--sm" href="request.html">اطلب</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="equip" data-equip data-category="compaction" data-condition="with-operator"
+                 data-search="مدحلة طرق roller دحل اسفلت رصف">
+          <div class="equip__media">
+            <svg viewBox="0 0 120 70" role="img" aria-label="مدحلة طرق"><rect x="14" y="34" width="80" height="16" rx="6" fill="#e85d04"/><path d="M54 34V18h24v16z" fill="#f5f1ea" opacity=".9"/><circle cx="30" cy="56" r="12" fill="#101d2e" stroke="#e9e2d7" stroke-width="3"/><circle cx="86" cy="56" r="10" fill="#101d2e" stroke="#e9e2d7" stroke-width="2"/></svg>
+          </div>
+          <div class="equip__body">
+            <h3 class="equip__title">مدحلة طرق 12 طن</h3>
+            <div class="equip__meta"><span>12 طن</span><span>أسطوانة 2.1 م</span><span>مع مشغّل</span></div>
+            <ul class="equip__specs"><li>دحل اهتزازي وثابت</li><li>مناسبة لطبقات الأسفلت</li></ul>
+            <div class="equip__foot">
+              <span class="equip__price">1,480 ر.س<small>لليوم · شامل الضريبة</small></span>
+              <a class="btn btn--sm" href="request.html">اطلب</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="equip" data-equip data-category="earthmoving" data-condition="instant"
+                 data-search="لودر wheel loader 950 محمل أمامي ردم">
+          <div class="equip__media">
+            <span class="equip__badge equip__badge--hot">تسليم فوري</span>
+            <svg viewBox="0 0 120 70" role="img" aria-label="لودر"><rect x="18" y="38" width="66" height="16" rx="6" fill="#e85d04"/><circle cx="34" cy="58" r="9" fill="#101d2e" stroke="#e9e2d7" stroke-width="2"/><circle cx="72" cy="58" r="9" fill="#101d2e" stroke="#e9e2d7" stroke-width="2"/><path d="M40 38V22h24v16z" fill="#f5f1ea" opacity=".9"/><path d="M88 40l20 6v12l-20-4z" fill="#f5f1ea" opacity=".9"/></svg>
+          </div>
+          <div class="equip__body">
+            <h3 class="equip__title">لودر كاتربيلر 950</h3>
+            <div class="equip__meta"><span>جرافة 2.7 م³</span><span>18 طن</span><span>بدون مشغّل</span></div>
+            <ul class="equip__specs"><li>تحميل ونقل المواد</li><li>إطارات جديدة</li></ul>
+            <div class="equip__foot">
+              <span class="equip__price">1,690 ر.س<small>لليوم · شامل الضريبة</small></span>
+              <a class="btn btn--sm" href="request.html">اطلب</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="equip" data-equip data-category="power" data-condition="instant with-operator"
+                 data-search="ضواغط هواء compressor 185 cfm طاقة">
+          <div class="equip__media">
+            <svg viewBox="0 0 120 70" role="img" aria-label="ضاغط هواء"><rect x="20" y="26" width="66" height="30" rx="7" fill="#e85d04"/><circle cx="46" cy="41" r="9" fill="#f5f1ea" opacity=".9"/><circle cx="72" cy="41" r="6" fill="#f5f1ea" opacity=".9"/><rect x="34" y="56" width="40" height="5" rx="2" fill="#101d2e"/></svg>
+          </div>
+          <div class="equip__body">
+            <h3 class="equip__title">ضاغط هواء 185 CFM</h3>
+            <div class="equip__meta"><span>185 CFM</span><span>7 بار</span><span>مع مشغّل</span></div>
+            <ul class="equip__specs"><li>مجهّز بمطرقة هوائية</li><li>مناسب لأعمال التكسير</li></ul>
+            <div class="equip__foot">
+              <span class="equip__price">780 ر.س<small>لليوم · شامل الضريبة</small></span>
+              <a class="btn btn--sm" href="request.html">اطلب</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="equip" data-equip data-category="lifting" data-condition="with-operator"
+                 data-search="سلة رفع aerial platform lift 18 م رفع">
+          <div class="equip__media">
+            <svg viewBox="0 0 120 70" role="img" aria-label="سلة رفع"><rect x="16" y="50" width="56" height="12" rx="5" fill="#e85d04"/><circle cx="32" cy="64" r="7" fill="#101d2e" stroke="#e9e2d7" stroke-width="2"/><circle cx="58" cy="64" r="7" fill="#101d2e" stroke="#e9e2d7" stroke-width="2"/><path d="M40 50V28l26-10 3 7-24 9v16z" fill="#f5f1ea" opacity=".9"/><rect x="70" y="16" width="30" height="14" rx="3" fill="#e85d04"/></svg>
+          </div>
+          <div class="equip__body">
+            <h3 class="equip__title">سلة رفع مقصية 18 م</h3>
+            <div class="equip__meta"><span>ارتفاع 18 م</span><span>حمولة 320 كجم</span><span>مع مشغّل</span></div>
+            <ul class="equip__specs"><li>مناسبة لواجهات المباني</li><li>حزام أمان مزدوج</li></ul>
+            <div class="equip__foot">
+              <span class="equip__price">920 ر.س<small>لليوم · شامل الضريبة</small></span>
+              <a class="btn btn--sm" href="request.html">اطلب</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="empty-state" id="empty-state" hidden>
+        <h3>لا توجد نتائج مطابقة</h3>
+        <p>جرّب توسيع نطاق البحث أو إعادة تعيين الفلاتر لعرض جميع المعدات المتاحة.</p>
+      </div>
+
+      <div class="form-note mt-6">
+        <strong>لم تجد ما تبحث عنه؟</strong>
+        أرسل لنا المواصفات المطلوبة وسنبحث في شبكة موردينا الـ46 عن أقرب بديل متاح،
+        <a href="request.html">عبر نموذج الطلب المخصّص</a>.
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sand">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2>محتاج معدة غير موجودة في الكتالوج؟</h2>
+          <p>صف احتياجك وسنوفّر لك عرضًا من موردينا خلال 30 دقيقة.</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn--on-navy" href="request.html">اطلب عرض سعر مخصّص</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">م</span>
+          <span class="brand__text">مِعداد</span>
+        </a>
+        <p>منصة سعودية لتأجير المعدات الثقيلة بعقود إلكترونية وأسعار معلنة. نموذج مرجعي لتصميم واجهات وتجربة مستخدم.</p>
+      </div>
+      <div>
+        <h2>المنصة</h2>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="equipment.html">المعدات</a></li>
+          <li><a href="how-it-works.html">كيف نعمل</a></li>
+          <li><a href="request.html">طلب تأجير</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>مصادر</h2>
+        <ul>
+          <li><a href="docs/COMPARISON.html">تقرير المقارنة التقني</a></li>
+          <li><a href="docs/PITCH.html">ملخص العرض</a></li>
+          <li><a href="README.md">ملفات المشروع</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>تواصل</h2>
+        <ul>
+          <li><a href="tel:+966920000000">920 000 000</a></li>
+          <li><a href="mailto:hello@midaad.example">hello@midaad.example</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__base">
+      <span>© <span data-year>2026</span> مِعداد — نموذج تصميم مرجعي. جميع الحقوق محفوظة.</span>
+      <span>هذا العمل تصميم أصلي ولا يستخدم أي أصول أو شيفرة من أي جهة أخرى.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

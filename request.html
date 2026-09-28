@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اطلب معدة | مِعداد — تسعيرة فورية وعقد إلكتروني</title>
+<meta name="description" content="أرسل طلب تأجير معدة ثقيلة: حدّد النوع والمدة والموقع، واستلم تسعيرة نهائية معلنة فورًا مع إمكانية التوقيع الإلكتروني.">
+<meta name="theme-color" content="#1a2f4a">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a2f4a'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3E%D9%85%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">تخطَّ إلى المحتوى الرئيسي</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html" aria-label="مِعداد — الصفحة الرئيسية">
+      <span class="brand__mark" aria-hidden="true">م</span>
+      <span class="brand__text">
+        مِعداد
+        <span class="brand__sub">تأجير المعدات الثقيلة</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="فتح القائمة">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="التنقل الرئيسي">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">الرئيسية</a></li>
+        <li><a class="site-nav__link" href="equipment.html">المعدات</a></li>
+        <li><a class="site-nav__link" href="how-it-works.html">كيف نعمل</a></li>
+        <li class="site-nav__cta"><a class="btn btn--sm" href="request.html" aria-current="page">اطلب معدة</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">طلب تأجير</span>
+        <h1>اطلب معدتك — واستلم التسعيرة النهائية فورًا</h1>
+        <p>
+          املأ الحقول التالية. لا نطلب منك بيانات دفع في هذه المرحلة، ولن يتم أي
+          التزام مالي قبل توقيعك على العقد. الحقول المعلّمة بـ<span class="field__req">*</span> مطلوبة.
+        </p>
+      </div>
+
+      <div class="split" style="align-items:start">
+        <div>
+          <form class="form" data-validate-form novalidate>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="req-name">الاسم الكامل <span class="field__req" aria-hidden="true">*</span></label>
+                <input type="text" id="req-name" name="name" autocomplete="name"
+                       data-validate="required minlen:3" placeholder="مثال: عبدالله الحربي">
+                <span class="field__msg" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="req-company">الشركة أو الجهة</label>
+                <input type="text" id="req-company" name="company" autocomplete="organization"
+                       placeholder="اختياري — للمشاريع والمنشآت">
+                <span class="field__msg" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="req-phone">رقم الجوال <span class="field__req" aria-hidden="true">*</span></label>
+                <input type="tel" id="req-phone" name="phone" autocomplete="tel" inputmode="tel"
+                       data-validate="required phone" placeholder="05xxxxxxxx">
+                <span class="field__msg" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="req-email">البريد الإلكتروني <span class="field__req" aria-hidden="true">*</span></label>
+                <input type="email" id="req-email" name="email" autocomplete="email" inputmode="email"
+                       data-validate="required email" placeholder="name@company.com">
+                <span class="field__msg" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="req-equipment">نوع المعدة <span class="field__req" aria-hidden="true">*</span></label>
+                <select id="req-equipment" name="equipment" data-validate="required">
+                  <option value="">اختر نوع المعدة…</option>
+                  <option value="حفارة زحّافة">حفارة زحّافة</option>
+                  <option value="بلدوزر">بلدوزر</option>
+                  <option value="لودر / محمل أمامي">لودر / محمل أمامي</option>
+                  <option value="رافعة متحركة">رافعة متحركة</option>
+                  <option value="رافعة شوكية">رافعة شوكية</option>
+                  <option value="سلة رفع">سلة رفع</option>
+                  <option value="مدحلة طرق">مدحلة طرق</option>
+                  <option value="مولد كهربائي">مولد كهربائي</option>
+                  <option value="ضاغط هواء">ضاغط هواء</option>
+                  <option value="غير محدد — أحتاج استشارة">غير محدد — أحتاج استشارة</option>
+                </select>
+                <span class="field__msg" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="req-duration">مدة التأجير المطلوبة <span class="field__req" aria-hidden="true">*</span></label>
+                <select id="req-duration" name="duration" data-validate="required">
+                  <option value="">اختر المدة…</option>
+                  <option value="يوم واحد">يوم واحد</option>
+                  <option value="2 – 6 أيام">2 – 6 أيام</option>
+                  <option value="أسبوع">أسبوع</option>
+                  <option value="2 – 4 أسابيع">2 – 4 أسابيع</option>
+                  <option value="شهر أو أكثر">شهر أو أكثر</option>
+                </select>
+                <span class="field__msg" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="req-start">تاريخ بدء العمل</label>
+                <input type="date" id="req-start" name="start">
+                <span class="field__msg" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="req-site">الموقع (المدينة أو الحي) <span class="field__req" aria-hidden="true">*</span></label>
+                <input type="text" id="req-site" name="site"
+                       data-validate="required minlen:3" placeholder="مثال: الرياض — حي السلي">
+                <span class="field__msg" aria-live="polite"></span>
+              </div>
+
+              <div class="field field--full">
+                <label for="req-notes">وصف العمل المطلوب</label>
+                <textarea id="req-notes" name="notes"
+                          placeholder="اشرح باختصار: نوع العمل، عمق/ارتفاع، نوع التربة أو المواد، أي قيود على الموقع…"></textarea>
+                <span class="field__hint">كل تفصيل يساعدنا في ترشيح المعدة الأنسب وتفادي تعديل السعر لاحقًا.</span>
+                <span class="field__msg" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <fieldset style="border:0;padding:0;margin:0">
+              <legend class="filters__label" style="font-size:1rem;margin-bottom:.75rem">
+                هل تحتاج مشغّلًا مع المعدة؟
+              </legend>
+              <div class="choice-set">
+                <label class="choice">
+                  <input type="radio" name="operator" value="مع مشغّل" checked>
+                  <span>
+                    <strong>نعم، مع مشغّل معتمد</strong>
+                    <span>نوفّر مشغّلًا مؤهلًا بشهادات سارية. السعر يشمل أجرته كاملًا.</span>
+                  </span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="operator" value="بدون مشغّل">
+                  <span>
+                    <strong>لا، لديّ مشغّلي الخاص</strong>
+                    <span>سنتحقق من ترخيص مشغّلك قبل التسليم، وهذا يخفض السعر اليومي.</span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-note">
+              <strong>خصوصية بياناتك:</strong>
+              نستخدم بياناتك لأجل هذا الطلب فقط. لا نشاركها مع أي طرف ثالث، ولا نبيعها.
+              في هذا النموذج المرجعي لا تُرسل البيانات إلى أي خادم — العملية تجري في متصفحك.
+            </div>
+
+            <div class="btn-row">
+              <button class="btn" type="submit">إرسال الطلب واستلام التسعيرة</button>
+              <a class="btn btn--secondary" href="equipment.html">تصفّح المعدات أولًا</a>
+            </div>
+
+            <div data-form-status class="alert alert--ok" hidden role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <!-- ================= LIVE SUMMARY ================= -->
+        <aside class="summary-box" id="request-summary" aria-labelledby="sum-title">
+          <h2 id="sum-title">ملخص طلبك</h2>
+          <p style="font-size:var(--fs-xs);color:#b9c5d4;margin-bottom:1.25rem">
+            يتحدث هذا الملخص تلقائيًا مع كل تغيير في النموذج.
+          </p>
+          <dl>
+            <dt>نوع المعدة</dt>
+            <dd id="sum-equipment">—</dd>
+
+            <dt>المدة</dt>
+            <dd id="sum-duration">—</dd>
+
+            <dt>الموقع</dt>
+            <dd id="sum-site">—</dd>
+
+            <dt>تاريخ البدء</dt>
+            <dd id="sum-start">—</dd>
+          </dl>
+          <div style="border-top:1px solid rgba(255,255,255,.15);margin-top:1.25rem;padding-top:1.25rem">
+            <p style="font-size:var(--fs-xs);color:#b9c5d4;margin-bottom:.5rem">التسعيرة النهائية</p>
+            <p style="font-size:var(--fs-md);font-weight:700;color:#fff;margin:0">
+              تصلك فورًا بعد الإرسال
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sand" aria-labelledby="help-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">قبل أن ترسل</span>
+        <h2 id="help-title">أسئلة شائعة عن الطلب</h2>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>هل يتطلب الطلب دفعًا مسبقًا؟</summary>
+          <p>
+            لا. الإرسال مجاني تمامًا ولا يُنشئ أي التزام مالي. بعد استلامك التسعيرة
+            وموافقتك عليها، يُطلب دفعة تأكيد 20% فقط لإصدار العقد.
+          </p>
+        </details>
+        <details>
+          <summary>كم تستغرق التسعيرة حتى تصلني؟</summary>
+          <p>
+            فوريًا للمعدات الموجودة في الكتالوج. أما الطلبات المخصّصة أو خارج نطاق
+            التغطية فتستغرق حتى 30 دقيقة في أوقات العمل.
+          </p>
+        </details>
+        <details>
+          <summary>هل أستطيع تعديل الطلب بعد إرساله؟</summary>
+          <p>
+            نعم، حتى قبل توقيع العقد. بعد التوقيع يمكن تعديل المدة أو الموقع بإشعار
+            مسبق 24 ساعة، مع إعادة تسعير البنود المتغيرة فقط.
+          </p>
+        </details>
+        <details>
+          <summary>ماذا يحدث لبياناتي؟</summary>
+          <p>
+            تُستخدم لتنفيذ طلبك فقط: التواصل معك، إصدار التسعيرة والعقد. لا تُشارك مع
+            موردين آخرين ولا تُستخدم لأي تسويق دون موافقتك الصريحة.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">م</span>
+          <span class="brand__text">مِعداد</span>
+        </a>
+        <p>منصة سعودية لتأجير المعدات الثقيلة بعقود إلكترونية وأسعار معلنة. نموذج مرجعي لتصميم واجهات وتجربة مستخدم.</p>
+      </div>
+      <div>
+        <h2>المنصة</h2>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="equipment.html">المعدات</a></li>
+          <li><a href="how-it-works.html">كيف نعمل</a></li>
+          <li><a href="request.html">طلب تأجير</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>مصادر</h2>
+        <ul>
+          <li><a href="docs/COMPARISON.html">تقرير المقارنة التقني</a></li>
+          <li><a href="docs/PITCH.html">ملخص العرض</a></li>
+          <li><a href="README.md">ملفات المشروع</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>تواصل</h2>
+        <ul>
+          <li><a href="tel:+966920000000">920 000 000</a></li>
+          <li><a href="mailto:hello@midaad.example">hello@midaad.example</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__base">
+      <span>© <span data-year>2026</span> مِعداد — نموذج تصميم مرجعي. جميع الحقوق محفوظة.</span>
+      <span>هذا العمل تصميم أصلي ولا يستخدم أي أصول أو شيفرة من أي جهة أخرى.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
